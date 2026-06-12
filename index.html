@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=1200">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=1050">
     <title>Aulac Fleet – Position Dashboard</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Arial, sans-serif; background: #ffffff; height: 100vh; overflow: hidden; display: flex; flex-direction: column; -webkit-font-smoothing: antialiased; }
+        
+        /* Dùng 100dvh để khắc phục triệt để lỗi Chrome che mất footer */
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            background: #ffffff; 
+            height: 100vh; 
+            height: 100dvh; 
+            overflow: hidden; 
+            display: flex; 
+            flex-direction: column; 
+            -webkit-font-smoothing: antialiased; 
+        }
 
         /* HEADER */
         #topbar { display: flex; align-items: center; justify-content: space-between; padding: 8px 30px; background: #f8fafc; border-bottom: 3px solid #e2e8f0; flex-shrink: 0; }
@@ -42,37 +53,6 @@
         /* FOOTER */
         #footer { display: flex; justify-content: space-between; align-items: center; padding: 10px 30px; font-size: 16px; font-weight: 600; color: #64748b; background: #f8fafc; border-top: 1px solid #e2e8f0; flex-shrink: 0; }
         #footer-clock { color: #0f172a; font-weight: 700; background: #e2e8f0; padding: 5px 15px; border-radius: 6px; letter-spacing: 1px; }
-        table {
-    display: block !important;
-    overflow-x: auto !important;
-    width: 100% !important;
-    -webkit-overflow-scrolling: touch !important;
-}
-html, body {
-    width: 100%;
-    overflow-x: hidden !important;
-}
-
-body {
-    zoom: 0.9; /* Con số này ép thu nhỏ toàn bộ trang web (bảng, logo, chữ) xuống còn 60% */
-}
-
-td, th {
-    padding: 6px !important; /* Ép thu hẹp độ cao của các hàng lại để bảng ngắn hơn */
-}
-html, body {
-    width: 100%;
-    overflow-x: hidden !important;
-}
-
-body {
-    zoom: 0.6; /* Con số này ép thu nhỏ toàn bộ trang web (bảng, logo, chữ) xuống còn 60% */
-}
-
-td, th {
-    padding: 6px !important; /* Ép thu hẹp độ cao của các hàng lại để bảng ngắn hơn */
-}
-
     </style>
 </head>
 <body>
