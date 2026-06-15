@@ -22,8 +22,10 @@
         /* HEADER */
         #topbar { display: flex; align-items: center; justify-content: space-between; padding: 8px 30px; background: #f8fafc; border-bottom: 3px solid #e2e8f0; flex-shrink: 0; }
         #mode-label { font-size: 18px; font-weight: 800; padding: 6px 20px; border-radius: 50px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); background: #eff6ff; color: #113285; border: 2px solid #bfdbfe; }
-        .logo { display: flex; align-items: center; }
-        .logo svg { width: 130px; height: auto; }
+        
+        /* BẢO VỆ LOGO KHỎI BỊ BÓP MÉO/CẮT XÉN */
+        .logo { display: flex; align-items: center; flex-shrink: 0; min-width: 140px; justify-content: flex-end; }
+        .logo svg { width: 140px; height: auto; display: block; }
 
         /* MAIN & TABLE */
         #main { padding: 15px 30px; flex: 1; display: flex; flex-direction: column; overflow: hidden; }
@@ -53,10 +55,9 @@
         /* FOOTER */
         #footer { display: flex; justify-content: space-between; align-items: center; padding: 10px 30px; font-size: 16px; font-weight: 600; color: #64748b; background: #f8fafc; border-top: 1px solid #e2e8f0; flex-shrink: 0; }
         #footer-clock { color: #0f172a; font-weight: 700; background: #e2e8f0; padding: 5px 15px; border-radius: 6px; letter-spacing: 1px; }
+        
         /* Ép cột số 5 (LAYCAN) nằm trên 1 dòng */
-        tbody td:nth-child(5) {
-            white-space: nowrap !important;
-        }
+        tbody td:nth-child(5) { white-space: nowrap !important; }
 
     </style>
 </head>
@@ -65,7 +66,7 @@
 <div id="topbar">
     <div id="mode-label">AULAC CORPORATION - Energy on the move</div>
     <div class="logo">
-        <svg xmlns="http://www.w3.org/2000/svg" width="140" height="51" viewBox="0 0 140 51" fill="none">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 51" fill="none">
             <g clip-path="url(#clip0_2221_911)">
                 <mask id="mask0_2221_911" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="109" y="0" width="31" height="12">
                     <path d="M133.761 0.367074C132.65 0.385427 115.958 0.374415 110.774 0.367074C109.929 0.389098 109.249 1.07551 109.249 1.92343V6.94121C109.249 7.77811 109.91 8.45351 110.738 8.49389H125.801C134.614 8.35074 134 11.8305 134 11.8305C134 11.8305 138.063 7.44776 139.202 5.28207C140.324 3.1531 139.901 0.363403 134.062 0.363403C133.963 0.363403 133.86 0.363403 133.757 0.363403" fill="white"></path>
@@ -99,7 +100,7 @@
                     <stop offset="1" stop-color="#0077BE"></stop>
                 </linearGradient>
                 <clipPath id="clip0_2221_911">
-                    <rect width="140" height="51" fill="white"></rect>
+                    <rect width="150" height="51" fill="white"></rect>
                 </clipPath>
             </defs>
         </svg>
