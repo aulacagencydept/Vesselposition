@@ -68,7 +68,7 @@
 <div id="topbar">
     <div id="mode-label">AULAC CORPORATION - Energy on the move</div>
     <div class="logo">
-        <svg xmlns="http://www.w3.org/2000/svg" width="140" height="51" viewBox="0 0 150 51" fill="none">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 51" fill="none">
             <g clip-path="url(#clip0_2221_911)">
                 <mask id="mask0_2221_911" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="109" y="0" width="31" height="12">
                     <path d="M133.761 0.367074C132.65 0.385427 115.958 0.374415 110.774 0.367074C109.929 0.389098 109.249 1.07551 109.249 1.92343V6.94121C109.249 7.77811 109.91 8.45351 110.738 8.49389H125.801C134.614 8.35074 134 11.8305 134 11.8305C134 11.8305 138.063 7.44776 139.202 5.28207C140.324 3.1531 139.901 0.363403 134.062 0.363403C133.963 0.363403 133.86 0.363403 133.757 0.363403" fill="white"></path>
@@ -141,7 +141,6 @@
     const API_URL = 'https://script.google.com/macros/s/AKfycbwZwBvsSr2K-TWq3d0zuBN0VUfmitdD4Le5q8kW-oAUM2WoBVrpSFb3IF7-PfWQnmje5g/exec';
     const TODAY = new Date(); TODAY.setHours(0,0,0,0);
 
-    // HÀM KIỂM TRA LAYCAN - NẾU TODAY NẰM TRONG KHOẢNG -> BÔI CAM
     function fmtLaycan(val) {
         if (!val || !val.includes('-')) return val;
         try {
@@ -187,7 +186,6 @@
     }
     updateDashboard(); setInterval(updateDashboard, 60000); 
     
-    // ĐỒNG HỒ CÓ SỐ 0 ĐỨNG TRƯỚC
     function updateClock() {
         const n = new Date();
         const d = String(n.getDate()).padStart(2, '0');
