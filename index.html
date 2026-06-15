@@ -51,7 +51,7 @@
         .time-col { text-align: left; font-size: 17px; font-weight: 500; color: #334155; white-space: nowrap; } 
         .status-col { text-align: left; font-size: 17px; font-weight: 700; white-space: nowrap; }
 
-        .color-eta { color: #16a34a; } .color-etd { color: #dc2626; } .color-arrived { color: #2563eb; } 
+        .color-eta { color: #16a34a; } .color-etd { color: #dc2626; } .color-arrived { color: #2563eb; } .color-pob { color: #ff7300; }
         .text-muted { color: #cbd5e1; grid-column: span 2; }
 
         /* CẢNH BÁO LAYCAN MÀU CAM KHI ĐẾN HẠN */
@@ -168,9 +168,12 @@
                 for (let i = 0; i < maxLines; i++) {
                     let s = statusLines[i] || '';
                     let c = 'status-col';
+                    
                     if (s.toUpperCase().includes('ETA')) c += ' color-eta';
                     else if (s.toUpperCase().includes('ETD')) c += ' color-etd';
                     else if (s.toUpperCase().includes('ARRIVED')) c += ' color-arrived';
+                    else if (s.toUpperCase().includes('POB')) c += ' color-pob'; /* Đã thêm điều kiện nhận diện POB / ET-POB */
+                    
                     statusContent += `<span class="time-col">${timeLines[i] || ''}</span><span class="${c}">${s}</span>`;
                 }
                 tbody.innerHTML += `<tr>
