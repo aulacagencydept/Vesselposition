@@ -2,18 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1050">
     <title>Aulac Corporation - Fleet Position</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
-        /* Dùng 100dvh để khắc phục triệt để lỗi Chrome che mất footer */
+        /* Dùng 100dvh để khắc phục triệt để lỗi Chrome/Safari che mất footer trên mobile */
         body { 
             font-family: 'Segoe UI', Arial, sans-serif; 
             background: #ffffff; 
+            color: #1e293b;
             height: 100vh; 
             height: 100dvh; 
-            width: 100vw;
+            width: 100%;
             overflow: hidden; 
             display: flex; 
             flex-direction: column; 
@@ -26,16 +27,18 @@
         .logo { display: flex; align-items: center; }
         .logo svg { width: 130px; height: auto; }
 
-        /* MAIN & TABLE (GIỮ NGUYÊN 100%) */
+        /* MAIN & TABLE */
         #main { padding: 15px 30px; flex: 1; display: flex; flex-direction: column; overflow: hidden; }
         .section-title { font-size: 22px; font-weight: 700; color: #334155; text-transform: uppercase; margin-bottom: 8px; flex-shrink: 0; }
         
         table { width: 100%; border-collapse: collapse; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05); flex: 1; display: table; }
         thead tr { background: linear-gradient(135deg, #f1f5f9, #e2e8f0); }
-        thead th { padding: 10px; text-align: center; vertical-align: middle; font-weight: 700; font-size: 16px; color: #0f172a; border-bottom: 4px solid #f59e0b; }
+        thead th { padding: 10px; text-align: center; vertical-align: middle; font-weight: 700; font-size: 16px; color: #0f172a; border-bottom: 4px solid #f59e0b; line-height: 1.3; }
         
         tbody tr:nth-child(even) { background: #f8fafc; }
         tbody tr:nth-child(odd) { background: #ffffff; }
+        tbody tr:hover { background: #f1f5f9; transition: background 0.2s; }
+        
         tbody tr { height: 12.5%; } 
         tbody td { padding: 6px 10px; text-align: center; vertical-align: middle; border-bottom: 1px solid #e2e8f0; font-size: 18px; font-weight: 600; color: #334155; }
         
@@ -59,9 +62,7 @@
         #footer-clock { color: #0f172a; font-weight: 700; background: #e2e8f0; padding: 5px 15px; border-radius: 6px; letter-spacing: 1px; }
         
         /* Ép cột số 5 (LAYCAN) nằm trên 1 dòng */
-        tbody td:nth-child(5) {
-            white-space: nowrap !important;
-        }
+        tbody td:nth-child(5) { white-space: nowrap !important; }
     </style>
 </head>
 <body>
